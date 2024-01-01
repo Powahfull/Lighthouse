@@ -1,0 +1,84 @@
+﻿@model Lighthouse.Models.Announcements
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Announcements</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AttachmentData)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AttachmentData)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AttachmentFileName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AttachmentFileName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AttachmentContentType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AttachmentContentType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementAttachmentData)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementAttachmentData)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementAttachmentFileName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementAttachmentFileName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnnouncementAttachmentContentType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnnouncementAttachmentContentType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NotifyByEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NotifyByEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NotifyByWebsite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NotifyByWebsite)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Lighthouse.Models.Announcements>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttachmentData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttachmentFileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttachmentContentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementAttachmentData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementAttachmentFileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnouncementAttachmentContentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotifyByEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotifyByWebsite)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttachmentData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttachmentFileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttachmentContentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementAttachmentData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementAttachmentFileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnouncementAttachmentContentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotifyByEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotifyByWebsite)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
